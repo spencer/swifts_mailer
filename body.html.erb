@@ -1,0 +1,97 @@
+<body style="padding: 0; margin: 0;">
+<!-- Fill whole screen-->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#DDDDDD" height="100%">
+  <tr>
+    <td>&nbsp;</td>
+    <td>
+      <table border="0" cellpadding="1px" cellspacing="0" style="font-family: sans-serif width: 100%; max-width: 590px;" bgcolor="#CCCCCC">
+        <tr>
+          <td>
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-family: sans-serif" bgcolor="white">
+              <tr height="20px">
+                <td bgcolor="black">&nbsp;</td>
+                <td bgcolor="white">&nbsp;</td>
+                <td bgcolor="black">&nbsp;</td>
+                <td bgcolor="white">&nbsp;</td>
+                <td bgcolor="black">&nbsp;</td>
+                <td bgcolor="white">&nbsp;</td>
+                <td bgcolor="black">&nbsp;</td>
+                <td bgcolor="white">&nbsp;</td>
+                <td bgcolor="black">&nbsp;</td>
+                <td bgcolor="white">&nbsp;</td>
+                <td bgcolor="black">&nbsp;</td>
+                <td bgcolor="white">&nbsp;</td>
+                <td bgcolor="black">&nbsp;</td>
+              </tr>
+            </table>
+            <table width="100%" border="0" cellpadding="10px" cellspacing="0" style="font-family: sans-serif" bgcolor="white">
+              <tr>
+                <td>
+                  <h1 style="font-weight: 100">South Wonston Swifts - Under 11s</h1>
+                  <h2><%= details['date']  + ' - ' +  details['home_or_away'].capitalize %> to <%= details['opponents'] %></h2>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h2><%= details['score'] %> to <%= details['winners'] %></h2>
+                  <h3>Goal Scorers:</h3>
+                  <table cellpadding="5" border="1" cellspacing="0">
+                    <thead>
+                      <tr><th>Player</th><th>Goals</th></tr>
+                    </thead>
+                    <tbody>
+                    <% details['goal_scorers'].each do |goal_scorer| %>
+                      <tr>
+                        <td>
+                          <%= goal_scorer['name'] %>
+                        </td>
+                        <td>
+                          <%= goal_scorer['goals'] %>
+                        </td>
+                      </tr>
+                    <% end %>
+                    </tbody>
+                  </table>
+
+                  <p><%= details['body_copy']%></p>
+
+                  <h3>Man of the Match</h3>
+                  <p><%= details['motm'] %></p>
+                </td>
+              </tr>
+                <% (1 .. details['photo_count'].to_i).each.with_index(1) do | photo, index | %>
+                <tr>
+                  <td><%= image_tag(index) %></td>
+                </tr>
+              <% end %>
+            </table>
+            <!--<table width="100%" border="0" cellpadding="5" cellspacing="0" style="font-family: sans-serif" bgcolor="#CCFF99">-->
+              <!--<tr>-->
+                <!--<td>I've added new people's email addresses. If you don't want the emails, please send a reply and I'll remove you from future ones.</td>-->
+              <!--</tr>-->
+            <!--</table>-->
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-family: sans-serif" bgcolor="white">
+              <tr height="20px">
+                <td bgcolor="black">&nbsp;</td>
+                <td bgcolor="white">&nbsp;</td>
+                <td bgcolor="black">&nbsp;</td>
+                <td bgcolor="white">&nbsp;</td>
+                <td bgcolor="black">&nbsp;</td>
+                <td bgcolor="white">&nbsp;</td>
+                <td bgcolor="black">&nbsp;</td>
+                <td bgcolor="white">&nbsp;</td>
+                <td bgcolor="black">&nbsp;</td>
+                <td bgcolor="white">&nbsp;</td>
+                <td bgcolor="black">&nbsp;</td>
+                <td bgcolor="white">&nbsp;</td>
+                <td bgcolor="black">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</body>

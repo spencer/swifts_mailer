@@ -1,0 +1,16 @@
+---
+home_or_away: "away"
+winners: "Bournemouth"
+folder_date: "191013"
+dropbox_code: "1234567"
+date: "19th October"
+opponents: "Chelsea"
+photo_count: 21
+body_copy:  "A great match result, everybody worked hard."
+motm: "Man of the match went to John as centre forward, for being in the right place at the right time to score his goals"
+score: "7-1"
+goal_scorers:
+  - name : John Smith
+    goals : 4
+  - name : Ron Stoppable
+    goals : 3
