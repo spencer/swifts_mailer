@@ -21,6 +21,10 @@ describe 'MatchDetails' do
 
   it "generates image_tags" do
     match_details.image_tag(1).should == '<img style="width: 100%; height: auto;" src="https://dl.dropboxusercontent.com/u/1111111/fordingbridge_121013/F1.jpg">'
+  end
 
+  it "substitutes spaces in image tag" do
+    match_details.details['opponents'] = 'simply soccer'
+    match_details.image_tag(1).should include('simply_soccer_121013')
   end
 end

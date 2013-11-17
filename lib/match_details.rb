@@ -8,7 +8,7 @@ class MatchDetails
     '<img style="width: 100%; height: auto;" src="https://dl.dropboxusercontent.com/u/' +
     details['dropbox_code'] +
     '/' +
-    details['opponents'].downcase +
+    details['opponents'].downcase.gsub(/\s/, '_') +
     '_' +
     details['folder_date'] +
     '/' +
