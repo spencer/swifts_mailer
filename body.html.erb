@@ -34,6 +34,7 @@
               <tr>
                 <td>
                   <h2><%= details['score'] %> to <%= details['winners'] %></h2>
+                  <% if details['goal_scorers'] %>
                   <h3>Goal Scorers:</h3>
                   <table cellpadding="5" border="1" cellspacing="0">
                     <thead>
@@ -52,6 +53,7 @@
                     <% end %>
                     </tbody>
                   </table>
+                <% end %>
 
                   <p><%= details['body_copy']%></p>
 
