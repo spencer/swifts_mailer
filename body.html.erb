@@ -33,7 +33,11 @@
               </tr>
               <tr>
                 <td>
-                  <h2><%= details['score'] %> to <%= details['winners'] %></h2>
+                  <h2>
+                    <%= details['score'] %>
+                    <%= 'to ' unless details['winners'].downcase == 'draw' %>
+                    <%= details['winners'] %>
+                  </h2>
                   <% if details['goal_scorers'] %>
                   <h3>Goal Scorers:</h3>
                   <table cellpadding="5" border="1" cellspacing="0">
