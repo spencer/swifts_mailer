@@ -8,7 +8,7 @@ class Mailer
     @html = HtmlSource.new(@match_details)
     
     @output = $stdout
-    @login = YAML::load_file(File.join(__dir__,'..', login))
+    @login = YAML::load_file(File.join(__dir__,'..', 'login.yml'))
   end
 
   def send_email(email, subject="Swifts Match Report")
@@ -23,9 +23,9 @@ class Mailer
           :address              => 'smtp.gmail.com',
           :port                 => '587',
           :enable_starttls_auto => true,
-          :user_name            => login[:user_name]
-          :password             => login[:password]
-          :authentication       => :plain, # :plain, :login, :cram_md5, no auth by default
+          :user_name            => login[:user_name],
+          :password             => login[:password],
+          :authentication       => :plain # :plain, :login, :cram_md5, no auth by default
         }
     )
     write_progress(email)
