@@ -23,8 +23,9 @@ class Mailer
           :address              => 'smtp.gmail.com',
           :port                 => '587',
           :enable_starttls_auto => true,
-          :user_name            => login[:user_name],
-          :password             => login[:password],
+          :user_name            => @login['user_name'],
+          :password             => @login['password'],
+          :domain               => "localhost.localdomain", # the HELO domain provided by the client to the server
           :authentication       => :plain # :plain, :login, :cram_md5, no auth by default
         }
     )
@@ -32,7 +33,7 @@ class Mailer
   end
 
   def send_to_list
-    @subscribers.each do |subscriber| 
+    @subscribers.each do |subscriber|
       send_email(subscriber)
     end
   end
