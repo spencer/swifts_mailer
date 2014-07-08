@@ -7,6 +7,8 @@ GEM
     autotest-growl (0.2.16)
     diff-lcs (1.2.1)
     erubis (2.7.0)
+    haml (4.0.5)
+      tilt
     i18n (0.6.4)
     kramdown (1.1.0)
     mail (2.5.3)
@@ -17,6 +19,11 @@ GEM
     polyglot (0.3.3)
     pony (1.4)
       mail (> 2.0)
+    rack (1.5.2)
+    rack-protection (1.5.2)
+      rack
+    rack-test (0.6.2)
+      rack (>= 1.0)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
@@ -25,6 +32,11 @@ GEM
     rspec-expectations (2.13.0)
       diff-lcs (>= 1.1.3, < 2.0)
     rspec-mocks (2.13.0)
+    sass (3.2.14)
+    sinatra (1.4.4)
+      rack (~> 1.4)
+      rack-protection (~> 1.4)
+      tilt (~> 1.3, >= 1.3.4)
     tilt (1.4.1)
     treetop (1.4.12)
       polyglot
@@ -38,7 +50,11 @@ DEPENDENCIES
   autotest
   autotest-growl
   erubis
+  haml
   kramdown
   pony
+  rack-test
   rspec
+  sass
+  sinatra
   tilt
