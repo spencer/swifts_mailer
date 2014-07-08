@@ -4,7 +4,6 @@ GEM
     ZenTest (4.9.3)
     autotest (4.4.6)
       ZenTest (>= 4.4.1)
-    autotest-growl (0.2.16)
     diff-lcs (1.2.1)
     erubis (2.7.0)
     haml (4.0.5)
@@ -48,7 +47,6 @@ PLATFORMS
 DEPENDENCIES
   ZenTest
   autotest
-  autotest-growl
   erubis
   haml
   kramdown
