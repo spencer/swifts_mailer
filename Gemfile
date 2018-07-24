@@ -7,6 +7,6 @@ source "https://rubygems.org"
 group :test do
   gem "ZenTest"
   gem "autotest"
-  gem "autotest-growl"
+  gem 'rspec-autotest'
   gem "rspec"
 end
